@@ -18,12 +18,27 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="front_end/register_team.php">Cadastro</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="front_end/login_team.php">Login</a>
-        </li>
+        <?php
+          if(!$_SESSION['team']) {
+            echo('
+              <li class="nav-item">
+                <a class="nav-link" href="front_end/register_team.php">Cadastro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="front_end/login_team.php">Login</a>
+              </li>
+            ');
+          } else {
+            echo('
+              <li class="nav-item">
+                <a class="nav-link" href="front_end/planning.php">Planejamento</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="front_end/midia.php">Mídia</a>
+              </li>
+            ');
+          }
+        ?>
         <li class="nav-item">
           <a class="nav-link" href="front_end/about.php">Sobre</a>
         </li>
