@@ -3,7 +3,7 @@
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<title>My Business Fair</title>
+	<title>My Business Fair - Cadastro</title>
 	<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -28,6 +28,18 @@
   </div>
 </nav>
 <body>
+  <div class="row my-5 text-center justify-content-center">
+    <div class="col-4">
+      <h1 class="my-2">Cadastro</h1>
+      <form method="POST" action="../back_end/register_team.php">
+        <input type="text" class="form-control mb-3" name="team_name" placeholder="Nome do empreendimento">
+        <input type="email" class="form-control mb-3" name="team_email" placeholder="E-mail">
+        <input type="text" class="form-control mb-3" name="team_spreadsheet_link" placeholder="Link da planilha do Google (informado pelo professor)">
+        <input type="password" class="form-control mb-3" name="team_password" placeholder="Senha">
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+      </form>
+    </div>
+  </div>
 </body>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL' crossorigin='anonymous'></script>
 </html>
