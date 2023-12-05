@@ -1,4 +1,6 @@
 <?php
+session_start(); 
+
 $team_email = $_POST["team_email"];
 $team_password = $_POST["team_password"];
 
@@ -12,9 +14,11 @@ $statement->execute();
 $team = $statement->fetch(PDO::FETCH_ASSOC);
 
 if ($team) {
+	$team_id = $team['id'];
+	$_SESSION['team'] = $team_id;
 	echo "<script>window.location.href='/'</script>";
 } else {
 	echo "<script>window.location.href='/front_end/login_error.php'</script>";
+	session_destroy();
 }
-
 ?>

@@ -16,5 +16,7 @@ $statement->execute([
 	':password' => $team_password,
 ]);
 
+// $team_id = $pdo->lastInsertId();
+
 echo "<script>window.location.href='/'</script>";
 ?>
