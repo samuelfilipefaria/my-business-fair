@@ -1,3 +1,7 @@
+<?php
+  session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,12 +18,27 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="register_team.php">Cadastro</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="login_team.php">Login</a>
-        </li>
+      <?php
+          if(!$_SESSION['team']) {
+            echo('
+              <li class="nav-item">
+                <a class="nav-link" href="register_team.php">Cadastro</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login_team.php">Login</a>
+              </li>
+            ');
+          } else {
+            echo('
+              <li class="nav-item">
+                <a class="nav-link" href="planning.php">Planejamento</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="midia.php">Mídia</a>
+              </li>
+            ');
+          }
+        ?>
         <li class="nav-item">
           <a class="nav-link" href="about.php">Sobre</a>
         </li>
@@ -32,3 +51,4 @@
 </body>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL' crossorigin='anonymous'></script>
 </html>
+
