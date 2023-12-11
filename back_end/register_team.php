@@ -18,5 +18,5 @@ $statement->execute([
 
 // $team_id = $pdo->lastInsertId();
 
-echo "<script>window.location.href='/'</script>";
+echo "<script>window.location.href='/front_end/login_success.php'</script>";
 ?>
