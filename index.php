@@ -48,7 +48,24 @@
 </nav>
 <body>
   <?php
-    echo $_SESSION['team'];
+    if(!$_SESSION['team']) {
+      echo('
+      <div class="row justify-content-center mt-5">
+        <h1 class="col-10 text-left fw-bold">
+          Olá estudante! Tudo certo? Sei que essa feria de negócios provavelmente será bem desafiadora, mas é uma experiência enriquecedora que não se encontra em qualquer escola, então aproveitem, o sistema está aqui para auxiliar um pouquinho neste processo, crie seu cadastro ou acesse seu time na página de login.
+        </h1>
+      </div>
+      ');
+    } else {
+      echo('
+        <li class="nav-item">
+          <a class="nav-link" href="front_end/planning.php">Planejamento</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="front_end/midia.php">Mídia</a>
+        </li>
+      ');
+    }
   ?>
 </body>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL' crossorigin='anonymous'></script>
