@@ -36,6 +36,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="front_end/midia.php">Mídia</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="front_end/logout_team.php">Sair</a>
+              </li>
             ');
           }
         ?>

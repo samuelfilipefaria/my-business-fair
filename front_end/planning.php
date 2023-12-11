@@ -43,6 +43,9 @@
               <li class="nav-item">
                 <a class="nav-link" href="midia.php">Mídia</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="logout_team.php">Sair</a>
+              </li>
             ');
           }
         ?>
