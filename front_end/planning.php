@@ -26,6 +26,7 @@
       <ul class="navbar-nav">
       <?php
           if(!$_SESSION['team']) {
+            echo "<script>window.location.href='/'</script>";
             echo('
               <li class="nav-item">
                 <a class="nav-link" href="register_team.php">Cadastro</a>

@@ -29,6 +29,7 @@
               </li>
             ');
           } else {
+            echo "<script>window.location.href='/'</script>";
             echo('
               <li class="nav-item">
                 <a class="nav-link" href="planning.php">Planejamento</a>
