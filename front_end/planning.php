@@ -59,7 +59,19 @@
 <body>
   <div class="row my-5 text-center justify-content-center">
     <div class="col-12">
-        <iframe src="https://docs.google.com/spreadsheets/d/1S4nTG6uryOIywn6oVNL1R_cj0QsuA5N_CVXgy2gZCk4/edit?usp=sharing?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+        <?php
+          $pdo = require_once '../config/connect_db.php';
+          $sql = 'SELECT spreadsheet_link FROM teams WHERE id = :id';
+          
+          $statement = $pdo->prepare($sql);
+          $statement->bindParam(':id', $_SESSION['team'], PDO::PARAM_INT);
+          $statement->execute();
+          $team = $statement->fetch(PDO::FETCH_ASSOC);
+          $team_spreadsheet_link = $team['spreadsheet_link'];
+          echo "
+            <iframe src='$team_spreadsheet_link?gid=0&amp;single=true&amp;widget=true&amp;headers=false'></iframe>
+          ";
+        ?>
     </div>
   </div>
 </body>
