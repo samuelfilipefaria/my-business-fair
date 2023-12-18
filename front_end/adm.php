@@ -7,7 +7,7 @@
 <head>
 	<meta charset='utf-8'>
 	<meta name='viewport' content='width=device-width, initial-scale=1'>
-	<title>My Business Fair</title>
+	<title>My Business Fair - Área do administrador</title>
 	<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
 </head>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
@@ -18,38 +18,39 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
-        <?php
+      <?php
           if(!$_SESSION['team']) {
             echo('
               <li class="nav-item">
-                <a class="nav-link" href="front_end/register_team.php">Cadastro</a>
+                <a class="nav-link" href="register_team.php">Cadastro</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="front_end/login_team.php">Login</a>
+                <a class="nav-link" href="login_team.php">Login</a>
               </li>
             ');
           } else {
+            echo "<script>window.location.href='/'</script>";
             echo('
               <li class="nav-item">
-                <a class="nav-link" href="front_end/planning.php">Planejamento</a>
+                <a class="nav-link" href="planning.php">Planejamento</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="front_end/midia.php">Mídia</a>
+                <a class="nav-link" href="midia.php">Mídia</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="front_end/logout_team.php">Sair</a>
+                <a class="nav-link" href="logout_team.php">Sair</a>
               </li>
             ');
           }
         ?>
         <li class="nav-item">
-          <a class="nav-link" href="front_end/about.php">Sobre</a>
+          <a class="nav-link" href="about.php">Sobre</a>
         </li>
         <?php
           if($_SESSION['adm']) {
             echo('
               <li class="nav-item">
-                <a class="nav-link" href="front_end/adm.php">Área do administrador</a>
+                <a class="nav-link" href="adm.php">Área do administrador</a>
               </li>
               
             ');
@@ -60,25 +61,11 @@
   </div>
 </nav>
 <body>
-  <?php
-    if(!$_SESSION['team']) {
-      echo('
-        <div class="row justify-content-center mt-5">
-          <h1 class="col-10 text-left fw-bold">
-            Olá estudante! Tudo certo? Sei que essa feria de negócios provavelmente será bem desafiadora, mas é uma experiência enriquecedora que não se encontra em qualquer escola, então aproveitem, o sistema está aqui para auxiliar um pouquinho neste processo, crie seu cadastro ou acesse seu time na página de login.
-          </h1>
-        </div>
-      ');
-    } else {
-      echo('
-        <div class="row justify-content-center mt-5">
-          <h1 class="col-10 text-left fw-bold">
-            Olá estudante! Tudo certo? Sei que essa feria de negócios provavelmente será bem desafiadora, mas é uma experiência enriquecedora que não se encontra em qualquer escola, então aproveitem, o sistema está aqui para auxiliar um pouquinho neste processo, acesse os dados do seu time na página de planejamento.
-          </h1>
-        </div>
-      ');
-    }
-  ?>
+  <div class="row my-5 text-center justify-content-center">
+    <div class="col-4">
+      
+    </div>
+  </div>
 </body>
 <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL' crossorigin='anonymous'></script>
 </html>

@@ -46,6 +46,16 @@
         <li class="nav-item">
           <a class="nav-link" href="about.php">Sobre</a>
         </li>
+        <?php
+          if($_SESSION['adm']) {
+            echo('
+              <li class="nav-item">
+                <a class="nav-link" href="adm.php">Área do administrador</a>
+              </li>
+              
+            ');
+          }
+        ?>
       </ul>
     </div>
   </div>
