@@ -10,7 +10,7 @@
 	<title>My Business Fair - Cadastro</title>
 	<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN' crossorigin='anonymous'>
 </head>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg" style="background-color: #38FF98;">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">My Business Fair</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
