@@ -29,7 +29,6 @@
               </li>
             ');
           } else {
-            echo "<script>window.location.href='/'</script>";
             echo('
               <li class="nav-item">
                 <a class="nav-link" href="planning.php">Planejamento</a>
@@ -62,8 +61,45 @@
 </nav>
 <body>
   <div class="row my-5 text-center justify-content-center">
-    <div class="col-4">
-      
+    <div class="col-11">
+      <?php
+        $pdo = require_once '../config/connect_db.php';
+        $sql = 'SELECT * FROM teams';
+        
+        $statement = $pdo->prepare($sql);
+        $statement->execute();
+        $teams = $statement->fetchAll();
+
+        echo"
+          <h1 class='my-2'>Equipes</h1>
+          <table class='table'>
+            <thead>
+              <tr>
+                <th scope='col'>ID</th>
+                <th scope='col'>Nome</th>
+                <th scope='col'>E-mail</th>
+                <th scope='col'>Link da planilha</th>
+                <th scope='col'>Senha</th>
+              </tr>
+            </thead>
+            <tbody>
+        ";
+        foreach ($teams as &$team) {
+          echo"
+            <tr>
+              <th scope='row'>$team[id]</th>
+              <td>$team[name]</td>
+              <td>$team[email]</td>
+              <td>$team[spreadsheet_link]</td>
+              <td>$team[password]</td>
+            </tr>
+          ";
+        }
+        echo"
+            </tbody>
+          </table>
+        ";
+      ?>
     </div>
   </div>
 </body>
