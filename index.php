@@ -34,7 +34,7 @@
                 <a class="nav-link" href="front_end/planning.php">Planejamento</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="front_end/midia.php">Mídia</a>
+                <a class="nav-link" href="front_end/media.php">Mídia</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="front_end/logout_team.php">Sair</a>

@@ -35,7 +35,7 @@
                 <a class="nav-link" href="planning.php">Planejamento</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="midia.php">Mídia</a>
+                <a class="nav-link" href="media.php">Mídia</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="logout_team.php">Sair</a>
@@ -68,6 +68,7 @@
         <input type="text" class="form-control mb-3" name="team_name" placeholder="Nome do empreendimento">
         <input type="email" class="form-control mb-3" name="team_email" placeholder="E-mail">
         <input type="text" class="form-control mb-3" name="team_spreadsheet_link" placeholder="Link da planilha do Google (informado pelo professor)">
+        <input type="text" class="form-control mb-3" name="team_google_drive_folder_link" placeholder="Link da pasta do Google Drive (informado pelo professor)">
         <input type="password" class="form-control mb-3" name="team_password" placeholder="Senha">
         <button type="submit" class="btn btn-primary">Cadastrar</button>
       </form>
